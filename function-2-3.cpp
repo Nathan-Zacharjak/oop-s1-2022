@@ -26,5 +26,5 @@ void twofivenine(int array[], int n)
 		}
 	}
 	
-	cout << "2:" << twos << ";5:" << fives << ";9:" << nines << endl;
+	cout << "2:" << twos << ";5:" << fives << ";9:" << nines << ";" << endl;
 }
