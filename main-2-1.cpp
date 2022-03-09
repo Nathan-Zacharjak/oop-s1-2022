@@ -1,13 +1,10 @@
 #include <iostream>
-#include <stdlib.h>
+#include <string.h>
+using namespace std;
+extern int print_as_binary(string);
 
-extern int minimum(int*,int);
-
-int main(int argc,char **argv)
-{
-	// your code goes here ...
-	int size = 0;
-	int array[] = {};
-	std::cout << "The minimum is: " << minimum(array, size) << std::endl;
+int main(int argc,char **argv){
+	string decimal_number = "75";
+	print_as_binary(decimal_number);
 	return 0 ;
 }

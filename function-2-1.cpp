@@ -1,21 +1,35 @@
-// function to ...
-int minimum(int array[], int n)
-{
-	// your code goes here
-	if (n < 1) 
-	{
-		return 0;
-	}
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+#include <vector>
+// takes a decimal number with 1 to 9 digits, and prints it as binary
+using namespace std;
 
-	int min = array[0];
-
-	for (int i = 0; i < n; i++)
-	{
-		if (array[i] < min)
-		{
-			min = array[i];
-		}
+void print_as_binary(string decimal_number){
+	// Convert the given string to a number
+	int number = stoi(decimal_number);
+	if (number == 0){
+		cout << 0 << endl;
+		return;
 	}
 	
-	return min;
+	vector<int> binary;
+
+	while (number > 0){
+		// Get the remainder of the number divided by two
+		// to get the digit of the binary number
+		int remainder = number % 2;
+		binary.push_back(remainder);
+		// Divide the number by two to get the next digit
+		number = number/2;
+	}
+	
+	// This method of getting a binary number gives it to you in reverse
+	// So, the array of ints of the binary number is printed out in reverse
+	for (int i = binary.size(); i >= 0; i--){
+		cout << binary[i];
+	}
+	cout << endl;
+
+	return;
 }

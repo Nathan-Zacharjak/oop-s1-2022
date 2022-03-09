@@ -1,18 +1,12 @@
-// function to ...
-int sum_array(int array[], int n)
-{
-	// if the array size is less than 1, abort
-	if (n < 1)
-	{
-		return 0;
-	}
+// sums all elements in the array diagonal
+int diagonal(int array[4][4]){
 
 	int sum = 0;
 
-	// sum all elements in the array
-	for (int i = 0; i < n; i++)
-	{
-		sum = array[i] + sum;
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			sum += array[i][j];
+		}
 	}
 
 	return sum;
