@@ -1,11 +1,6 @@
 // function to ...
-int maximum(int array[], int n)
-{
+int binary_to_number(int binary_digits[], int number_of_digits){
 	// your code goes here
-	if (n < 1){
-		return 0;
-	}
-
 	int max = array[0];
 
 	for(int i = 0; i < n; i++){

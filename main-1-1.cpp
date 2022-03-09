@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-extern int diagonal(int **);
+extern int diagonal(int[4][4]);
 
 int main(int argc,char **argv){
 	int array[4][4] = {{0 ,1 ,2 ,3 },
