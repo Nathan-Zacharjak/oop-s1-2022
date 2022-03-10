@@ -1,13 +1,16 @@
 #include <iostream>
 #include <stdlib.h>
 
-extern void twofivenine(int*,int);
+using namespace std;
 
-int main(int argc,char **argv)
-{
+extern int sum_if_a_palindrome(int [], int );
+
+int main(int argc,char **argv){
 	// your code goes here ...
-	int array[] = {9,9,9,9,5,9,9,9,9};
-	int size = 9;
-	twofivenine(array,size);
-	return 0 ;
+	int array[] = {1,2,3,2,1};
+	int size = 0;
+
+	cout << sum_if_a_palindrome(array,size) << endl;
+
+	return 0;
 }
