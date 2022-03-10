@@ -1,14 +1,17 @@
 #include <iostream>
 #include <stdlib.h>
 
-extern int sumtwo(int*,int*,int);
+extern void print_scaled_matrix(int [3][3],int);
 
-int main(int argc,char **argv)
-{
+int main(int argc,char **argv){
 	// your code goes here ...
-	int array[] = {1,2,3,4};
-	int secondarray[] = {0,-1,-2,-3};
+	int array[3][3] = {{1,2,3},
+				       {3,4,0},
+				       {6,7,8}
+					  };
+	int scale = 9;
 
-	std::cout << sumtwo(array, secondarray, 0) << std::endl;
-	return 0 ;
+	print_scaled_matrix(array, scale);
+
+	return 0;
 }

@@ -1,15 +1,20 @@
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
 // function to ...
-int sumtwo(int array[], int secondarray[], int n)
-{
+void print_scaled_matrix(int array[3][3],int scale){
 	// your code goes here
-	if (n < 1) {
-		return 0;
-	}
-	int sum = 0;
-	for (int i = 0; i < n; i++){
-		sum = sum + array[i] + secondarray[i];
+
+	for (int i = 0; i < 3; i++){
+		for (int j = 0; j < 3; j++){
+			array[i][j] *= scale;
+			cout << array[i][j] << " ";
+		}
+		cout << endl;
 	}
 
-	return sum;
+	return;
 	
 }

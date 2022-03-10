@@ -1,16 +1,18 @@
 #include <iostream>
 #include <stdlib.h>
 
-extern int count(int*,int,int);
+extern void count_numbers(int [4][4]);
 
-int main(int argc,char **argv)
-{
+int main(int argc,char **argv){
 	// your code goes here ...
-	int array[] = {3,0,1,5,3};
-	int size = 5;
-	int num = 0;
+	int array[4][4] = {{0 ,2 ,2 ,2},
+					   {5 ,6 ,7 ,8},
+					   {9 ,10,11,12},
+					   {13,14,15,16}
+	};
 
-	std::cout << count(array,size,num) << std::endl;
+	count_numbers(array);
+
 	return 0 ;
 }
 
