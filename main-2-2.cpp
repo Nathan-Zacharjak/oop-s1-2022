@@ -1,14 +1,14 @@
 #include <iostream>
 #include <stdlib.h>
 
-extern int maximum(int*,int);
+extern int binary_to_number(int [], int);
 
-int main(int argc,char **argv)
-{
+int main(int argc,char **argv){
 	// your code goes here ...
-	int array[] = {-4,-9,0,2,1};
+	int array[] = {1,0,1,0,1};
 	int size = 5;
-	std::cout << maximum(array,size) << std::endl;
-	return 0 ;
+	std::cout << binary_to_number(array,size) << std::endl;
+	
+	return 0;
 }
 
