@@ -6,17 +6,17 @@ void print_class(string courses[4], string students[], int report_card[][4], int
 
 	for (int i = 0; i < nstudents + 1; i++){
 		if (i == 0){
-			cout << "Report Card";
+			cout << "Report Card ";
 			for (int i = 0; i < 4; i++){
-				cout << courses[i];
+				cout << courses[i] << " ";
 			}
 			
 		} else {
 			for (int j = 0; j < 5; j++){
 				if (j == 0){
-					cout << students[i];
+					cout << students[i - 1];
 				} else {
-					cout << report_card[i][j];
+					cout << report_card[i - 1][j - 1];
 				}
 				cout << " ";
 			}
