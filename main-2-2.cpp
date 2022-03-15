@@ -1,13 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
-
+using namespace std;
 extern int binary_to_number(int [], int);
 
 int main(int argc,char **argv){
 	// your code goes here ...
-	int array[] = {1,0,1,0,1};
-	int size = 5;
-	std::cout << binary_to_number(array,size) << std::endl;
+	int num = 5;
+	int* pointer = &num;
+	cout << pointer << " value: " << *pointer << endl;
 	
 	return 0;
 }

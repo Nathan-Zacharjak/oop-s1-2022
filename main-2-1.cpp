@@ -4,7 +4,8 @@ using namespace std;
 extern int print_as_binary(string);
 
 int main(int argc,char **argv){
-	string decimal_number = "75";
-	print_as_binary(decimal_number);
+	int number = 5;
+	int* pointer = &number;
+	cout << pointer << endl;
 	return 0 ;
 }
