@@ -1,14 +1,36 @@
 #include <iostream>
-#include <stdlib.h>
 
 using namespace std;
 
-extern int sum_if_a_palindrome(int integers[], int length);
+extern float arithmetic_ops(float left, float right, float (*op)(float,float));
+extern float add_op(float left, float right);
+extern float subtract_op(float left, float right);
+extern float multiply_op(float left, float right);
 
-int main(void){
-    int integers[] = {1,10,3,9,1};
-    int length = 5;
+int main(int argc, char const *argv[]){
+    float left = 0.0;
+    float right = 0.0;
+    string op = "+";
 
-    cout << sum_if_a_palindrome(integers, length) << endl;
+    cout << "Enter 1st number:" << endl;
+    cin >> left;
+    cout << "Enter 2nd number:" << endl;
+    cin >> right;
+    cout << "Enter operator: + or - or *" << endl;
+    cin >> op;
+
+
+    float (*opPointer)(float,float);
+
+    if (op == "+"){
+        opPointer = add_op;
+    } else if (op == "-"){
+        opPointer = subtract_op;
+    } else {
+        opPointer = multiply_op;
+    }
+    
+    cout << arithmetic_ops(left, right, opPointer) << endl;
+
     return 0;
 }

@@ -1,48 +1,22 @@
+ 
+// use a function pointer to call the appropriate operator function
+// eg to add       arithmetic_ops(10,2,add_op)
+// eg to subtract  arithmetic_ops(10,2,subtract_op)
 #include <iostream>
-#include <stdlib.h>
-
 using namespace std;
 
-bool is_a_palindrome(int integers[], int length){
-    if (length < 1){
-        return -1;
-    }
-
-    int intCounter = 0;
-    
-    for (int i = length - 1; i >= 0; i--){
-        if (integers[i] != integers[intCounter]){
-            return false;
-        }
-        
-        intCounter++;
-    }
-
-    return true;
-    
+float add_op(float left, float right){
+    return left + right;
 }
 
-int sum_elements(int integers[], int length) {
-    if (length < 1){
-        return -1;
-    }
-    
-    int sum = 0;
-    for (int i = 0; i < length; i++){
-        sum += integers[i];
-    }
-
-    return sum;
-    
+float subtract_op(float left, float right){
+    return left - right;
 }
 
-int sum_if_a_palindrome(int integers[], int length){
-    if (length < 1){
-        return -1;
-    } else if (is_a_palindrome(integers, length)){
-        return sum_elements(integers, length);
-    } else {
-        return -2;
-    }
-    
+float multiply_op(float left, float right){
+    return left * right;
+}
+
+float arithmetic_ops(float left, float right, float (*op)(float,float)){
+		return (*op)(left, right);
 }
