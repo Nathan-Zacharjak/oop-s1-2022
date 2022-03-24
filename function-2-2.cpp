@@ -11,6 +11,7 @@ int maximum_sum(int *nums,int length){
     
     for (int firstIndex = 0; firstIndex < length; firstIndex++){
         int tempSum = 0;
+        cout << nums[firstIndex] << endl;
         for (int i = firstIndex; i < length - firstIndex; i++){
             tempSum += nums[i];
             if (tempSum > maxSum){
