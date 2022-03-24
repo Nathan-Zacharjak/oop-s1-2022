@@ -1,10 +1,5 @@
-# TEST MAKEFILE
-
-mycode: main.cpp sum.o 
-        g++ -o mycode main.cpp sum.o 
-
-sum.o: sum.cpp 
-        g++ -c sum.cpp
-
-test:
-        ./mycode < code1.txt
+all: mycode run
+run:
+	./mycode
+mycode: main-1-3.cpp function-1-3.cpp
+	g++ -o mycode main-1-3.cpp function-1-3.cpp
