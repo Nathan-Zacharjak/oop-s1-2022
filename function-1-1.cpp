@@ -1,13 +1,19 @@
-#include <string>
+#include <iostream>
 using namespace std;
 
-void copy_2d_strings(string first[][2], string second[][2], int n){
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < 2; j++){
-            second[i][j] = first[i][j];
-        }
+int* readNumbers(){
+    int length = 10;
+    int* numbers = new int[length];
+
+    for (int i = 0; i < length; i++){
+        cin >> numbers[i];
     }
     
+    return numbers;
+}
 
-    return;
+void printNumbers(int* numbers, int length){
+    for (int i = 0; i < length; i++){
+        cout << i << " " << numbers[i] << endl;
+    }
 }
