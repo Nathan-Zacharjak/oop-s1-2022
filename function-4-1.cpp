@@ -13,12 +13,28 @@ int* readNumbers(){
 }
 
 int secondSmallestSum(int *numbers,int length){
-    int result = 0;
+    int smallest = numbers[0];
+    int secondSmallest = numbers[0];
 
     for (int i = 0; i < length; i++){
+        int sum = 0;
+
+        for (int j = i; j < length; j++){
+            sum = sum + numbers[j];
+
+            if (smallest > sum){
+                smallest = sum;
+                
+            }
+            
+            if (smallest < sum && secondSmallest > sum){
+                secondSmallest = sum;
+            }
+
+        }
         
     }
 
-    return result;
+    return secondSmallest;
     
 }
