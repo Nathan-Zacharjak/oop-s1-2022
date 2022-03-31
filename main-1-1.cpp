@@ -2,15 +2,18 @@
 
 using namespace std;
 
-extern int* readNumbers();
-extern void printNumbers(int* numbers, int length);
+extern int **copy_to_pointer_array(int *vals, int len);
 
-int main(int argc, char const *argv[]){
-    int* numbers = readNumbers();
+int main(void){
+    int vals[]={1,2,3,4,5};
+    int len = 5;
+    int **val_ptrs=copy_to_pointer_array(vals,len);
+    *(val_ptrs[2])=20;
+    *(val_ptrs[0])=10;
+
+    for (int i = 0; i < len; i++){
+        cout << *(val_ptrs[i]) << endl;
+    }
     
-    printNumbers(numbers, 10);
-
-    delete[] numbers;
-
     return 0;
 }

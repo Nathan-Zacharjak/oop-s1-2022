@@ -1,19 +1,10 @@
-#include <iostream>
-using namespace std;
+int **copy_to_pointer_array(int *vals, int len){
+    int** pointers = new int*[len];
 
-int* readNumbers(){
-    int length = 10;
-    int* numbers = new int[length];
-
-    for (int i = 0; i < length; i++){
-        cin >> numbers[i];
+    for (int i = 0; i < len; i++){
+        pointers[i] = &vals[i];
     }
     
-    return numbers;
-}
 
-void printNumbers(int* numbers, int length){
-    for (int i = 0; i < length; i++){
-        cout << i << " " << numbers[i] << endl;
-    }
+    return pointers;
 }
