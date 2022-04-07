@@ -10,6 +10,7 @@ class person {
 		string _name;
 		int _salary;
 	public:
+		person();
 		person(string myName,int Salary); // a name and salary must be provided to create a person
 		void setName(string myName);      // change the person's name
 		string getName();
