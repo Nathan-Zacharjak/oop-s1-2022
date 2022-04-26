@@ -1,5 +1,5 @@
 #include <iostream>
-#include "musician.h"
+#include "Musician.h"
 #include <string>
 
 using namespace std;
