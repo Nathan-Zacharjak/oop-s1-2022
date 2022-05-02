@@ -1,5 +1,5 @@
 all: compile run
-compile: Truck.cpp Truck_yard.cpp main-1-2.cpp
-	g++ -o Driver Truck.cpp Truck_yard.cpp main-1-2.cpp
+compile: Player.cpp main-3-1.cpp
+	g++ -o Driver Player.cpp main-3-1.cpp
 run: Driver
 	./Driver
