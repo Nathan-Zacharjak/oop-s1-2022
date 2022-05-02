@@ -5,10 +5,7 @@ using namespace std;
 
 Player::Player(){
     _moves = "";
-}
-
-Player::Player(string moves){
-    _moves = moves;
+    _num_moves = 0;
 }
 
 char Player::getMove(){

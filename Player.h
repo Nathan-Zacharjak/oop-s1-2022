@@ -6,16 +6,16 @@
 using namespace std;
 
 class Player{
-private:
+protected:
     string _moves;
+    int _num_moves;
 public:
     Player();
-    Player(string moves);
-    // void virtual move() = 0;
-    // string virtual getMoves() = 0;
+    void virtual move() = 0;
+    string virtual getMoves() = 0;
     char getMove(); //returns the most recent move made
     bool win(Player * opponent); //compares players’ moves to see who wins
-    ~Player();
+    virtual ~Player();
 };
 
 #endif
