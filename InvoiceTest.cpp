@@ -15,8 +15,8 @@ int main(void){
 
     {
         Invoice invoice("ABCD");
-        invoice.addServiceCost(1);
-        if (invoice.getDollarsOwed() != 1) {
+        invoice.addServiceCost(100000000);
+        if (invoice.getDollarsOwed() != 100000000) {
             std::cout << "Test 2 failed!" << std::endl;
         }
     }
