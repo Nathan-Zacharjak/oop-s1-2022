@@ -1,5 +1,5 @@
 all: compile run
-compile: Player.cpp main-3-1.cpp
-	g++ -o Driver Player.cpp main-3-1.cpp
+compile: main-1-1.cpp Invoice.cpp
+	g++ -o Driver main-1-1.cpp Invoice.cpp
 run: Driver
 	./Driver
