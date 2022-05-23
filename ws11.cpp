@@ -29,6 +29,7 @@ class RecordsManager{
             if(_file.is_open()){                           
                 string line;
                 while (std::getline(_file,line)){
+                    // throw("Non-number value in record!");
                     records.push_back(stoi(line));
                 } 
                 _file.close();           
@@ -37,12 +38,16 @@ class RecordsManager{
 };
 
 int main(){        
-    RecordsManager receordM("test_clean.txt");
-    //RecordsManager receordM("test_corrupt.txt");
+    // RecordsManager receordM("test_clean.txt");
+    RecordsManager receordM("test_corrupt.txt");
     Records myRecords;
     
     // reads records  
-    receordM.read(myRecords);  
+    try{
+        receordM.read(myRecords);
+    }catch(const std::invalid_argument e){
+        cerr << e.what() << " error, non-integer value in record!" << "\n";
+    }
     for(int i=0;i<myRecords.size();i++){
         cout << myRecords[i] << endl;
     }
