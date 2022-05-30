@@ -1,13 +1,9 @@
 #include <string>
 #include "animal.h"
 
-int animal::lastID(0);
-
 animal::animal(string n, int v){
     name = n;
     volume = v;
-    animalID = lastID;
-    lastID = lastID + 1;
 }
 
 void animal::set_name(string n){
