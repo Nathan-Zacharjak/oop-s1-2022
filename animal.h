@@ -7,6 +7,7 @@ using namespace std;
 
 class animal{
 protected:
+    static int lastID;
                                // animals are allocated a unique ID on creation
     string name ;              // the animal's name
     int animalID ;             // the animal's unique ID
