@@ -10,10 +10,12 @@ Contract::Contract(){
 
 }
 
-Contract::Contract(int n){
-    numPages = n;
+Contract::Contract(int n):Document(){
     docID = amountDoc;
     amountDoc++;
+    title = "";
+    documentType = "Contract";
+    numPages = n;
 }
 
 int Contract::get_docID(){

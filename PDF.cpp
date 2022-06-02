@@ -8,7 +8,7 @@ PDF::PDF(){
 
 }
 
-PDF::PDF(int v){
+PDF::PDF(int v):Contract(){
     version = v;
 }
 
