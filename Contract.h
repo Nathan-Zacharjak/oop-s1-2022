@@ -1,27 +1,20 @@
-// #ifndef DOCUMENT_H
-// #define DOCUMENT_H
+#ifndef CONTRACT_H
+#define CONTRACT_H
 
-// #include <string>
+#include <string>
 
-// using namespace std;
+using namespace std;
 
-// class Document{
-// protected:
-//     string title;                   // the title of a Document
-//     string documentType;            // the type of Document
-//     int numPages;                   // the number of pages; takes only non-negative values
-    
-// public:
-//     Document(string t, string d, int n);   // creates a Document title t, type of document d, and number of pages n
-//     Document();
-//     string get_title();
-//     void set_title(string t);
-//     string get_documentTypee();
-//     void set_documentType(string d);
-//     string get_numPages();
-//     void set_numPages(int n);
-//     int virtual typesetMargins() = 0; // sets the margins based on the pages
-//     ~Document();
-// };
+class Contract{
+protected:
+    int docID;          // unique document id
+    static int amountDoc;
+public:
+    Contract(int n);     // sets number of pages
+                    // calls the constructor of the document class with title=="", 
+                    //documentType=="Contract" and numPage=n
+    Contract();
+    ~Contract();
+};
 
-// #endif
+#endif

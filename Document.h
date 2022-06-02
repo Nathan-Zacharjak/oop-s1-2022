@@ -16,9 +16,9 @@ public:
     Document();
     string get_title();
     void set_title(string t);
-    string get_documentTypee();
+    string get_documentType();
     void set_documentType(string d);
-    string get_numPages();
+    int get_numPages();
     void set_numPages(int n);
     int virtual typesetMargins() = 0; // sets the margins based on the pages
     ~Document();

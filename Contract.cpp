@@ -1,12 +1,14 @@
-// #include "Document.h"
-// #include <string>
+#include "Contract.h"
+#include <string>
 
-// using namespace std;
+using namespace std;
 
-// Document::Document(){
+static int Contract::amountDoc;
 
-// }
+Contract::Contract(){
 
-// Document::~Document(){
+}
 
-// }
+Contract::~Contract(){
+
+}
