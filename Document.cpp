@@ -7,6 +7,12 @@ Document::Document(){
 
 }
 
+Document::Document(string t, string d, int n){
+    title = t;
+    documentType = d;
+    numPages = n;
+}
+
 string Document::get_title(){
     return title;
 }
