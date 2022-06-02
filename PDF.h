@@ -10,13 +10,12 @@ class PDF:public Contract{
 protected:
     int version;  // stores the pdf version attribute  
 
-    bool hasTOCVersion(); // checks if there is a Table of Contents feature
-    int get_version(); // returns version attribute
-
 public:
     PDF();       // inherit from base class default constructor
     PDF(int v); // sets the version of the pdf
             // calls the Contract constructor with numPage==5
+    bool hasTOCVersion(); // checks if there is a Table of Contents feature
+    int get_version(); // returns version attribute
     ~PDF();
 };
 
