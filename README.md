@@ -1,2 +1,2 @@
-# oop-s1-2022
-Object Oriented Programming Semester 1 2022
+# 2022 Semester 1 Object Oriented Programming
+Introduced to Object-Oriented language, with several C++ projects
